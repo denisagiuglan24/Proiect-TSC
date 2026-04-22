@@ -6,7 +6,8 @@ Grupa: 334CD
 1. Diagrama Bloc (Hardware Architecture)
 Am proiectat arhitectura sistemului InkTime avand in centru SoC-ul nRF52840. Am optimizat conexiunile pentru un consum minim de curent si am ales protocoale de comunicatie eficiente (SPI pentru display si I2C pentru senzori).
 
-SURSA ENERGIE              SISTEM INTELIGENT INKTIME             PERIFERICE (I/O)
+```text
+       SURSA ENERGIE              SISTEM INTELIGENT INKTIME             PERIFERICE (I/O)
     +-----------------+          +-----------------------+          +-----------------------+
     | USB-C Connector |--- 5V ---|    nRF52840 (SoC)     |          |    E-PAPER DISPLAY    |
     |  (Incarcare)    |          | Bluetooth 5.0 Low En. |--- SPI --|     (1.54" 24-pin)    |
@@ -29,6 +30,7 @@ SURSA ENERGIE              SISTEM INTELIGENT INKTIME             PERIFERICE (I/O
     | RT6160A (Buck-B)|<---------------------+                      +-----------------------+
     |  Output: 3.3V   |-------------------------------------------->|   CRYSTAL 32.768kHz   |
     +-----------------+                                             +-----------------------+
+```
 
 2. Bill of Materials (BOM)
 Am selectat toate componentele de pe platforma JLC Parts, respectand capsulele SMD impuse (0201 pentru rezistente si condensatori de 100nF, 0402 pentru restul).
